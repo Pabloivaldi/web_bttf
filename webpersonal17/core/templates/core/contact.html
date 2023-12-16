@@ -1,0 +1,86 @@
+ <!--  <h1>Mi web personal</h1>
+        <ul>
+            <li><a href="/">Portada</a></li>
+            <li><a href="/about-me">Acerca de </a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>--> 
+    
+{% extends "core/base.html" %}
+{% block title%}Contacto{% endblock %}
+
+{%block content%}
+
+<div class="contenedor_form_general">
+    <div class="caja1">
+
+      <form action="https://formsubmit.co/62a0231b717e9e4efad91231bb168f7b" method="POST" class="formulario" id="form">
+
+    <h3 class="titulo">formulario de suscripcion</h3>
+    <p class="parrafo"> ¡No te pierdas ni un solo detalle! Si te gustaria recibir informacion sobre eventos, noticias y curiosidades de esta franquicia, suscríbete a nuestro portal de noticias y mantente al tanto de todas las novedades de estas icónicas películas.
+    </p><br>
+   
+    <input class="opciones" type="text" placeholder="Nombre" id="nombre" name="name" required>
+    <p class="mensajeError" id="nombreError"></p>
+
+    <input class="opciones" type="text" placeholder="Apellido" id="apellido" name="apellido" required>
+    <p class="mensajeError" id="apellidoError"></p>
+    
+    
+    <input class="opciones" type="email" placeholder="E-Mail" id="email" name="email" required>
+    <p class="mensajeError" id="emailError"></p>
+
+
+    <input id="numero" class="opciones" type="text" placeholder="Numero de celular" pattern="[0-9]{1,10}" name="numero" required>
+    <p class="mensajeError" id="numeroError"></p>
+     <!--pattern="[0-9]{1,10}", quiere decir que se aceptan valores del 0 al 9, y q solo se aceptan entre 1 y 10 digitos como maximo-->
+  
+
+    <input id="soloenviar" class="enviar" type="submit" value="enviar">
+
+    <input type="hidden" name="_next" value="https://outatime.netlify.app">
+    <!--Sin esto, cada vez que se envia el formulario nos redirige a una pagina que nos dice que el form se envio con exito. El value es la direccion a la que quiero que vuelva.-->
+    <input type="hidden" name="_captcha" value="false">
+    <!--con esto quita el captcha, porque lo ponemos el false. Si lo queremos, ponemos true.-->
+    
+    <p id="cancelarSub">¿Desea cancelar su suscripción? <u class="clickAqui">Haz click Aquí</u></p>
+
+    </form>
+  </div>
+
+      <div class="caja2">
+
+        <form action="https://formsubmit.co/62a0231b717e9e4efad91231bb168f7b" method="POST" class="formulario2" id="form2">
+        
+                <h3 class="titulo">formulario de cancelacion de suscripcion</h3>
+     
+                <input class="opciones" type="text" placeholder="Nombre" id="nombre2" name="nombre_cancelar" required>
+                <p class="mensajeError" id="nombreError2"></p>
+      
+                <input class="opciones" type="text" placeholder="Apellido" id="apellido2" name="apellido_cancelar" required>
+                <p class="mensajeError" id="apellidoError2"></p>
+      
+                <input class="opciones" type="email" placeholder="E-Mail" id="email2" name="email_cancelar" required>
+                <p class="mensajeError" id="emailError2"></p>
+
+                <p class="centro">¿Desea dar algun motivo para su desuscripción?</p><br>
+
+                <textarea id="" placeholder="Escriba aqui su mensaje." cols="30" rows="10" name="sugerencia_usuario"></textarea>
+  
+
+                <input id="soloenviar2" class="enviar" type="submit" value="enviar">
+
+                <input type="hidden" name="_next" value="https://outatime.netlify.app">
+                <!--Sin esto, cada vez que se envia el formulario nos redirige a una pagina que nos dice que el form se envio con exito. El value es la direccion a la que quiero que vuelva.-->
+                <input type="hidden" name="_captcha" value="false">
+                <!--con esto quita el captcha, porque lo ponemos el false. Si lo queremos, ponemos true.-->
+
+                <p class="centro"><u class="cerrar">Cerrar</u></p>
+
+          </form>
+
+      </div>
+  
+</div>
+
+{%endblock%}

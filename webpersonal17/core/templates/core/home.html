@@ -1,0 +1,59 @@
+<!--ESTO YA NO LO USO PORUQE VOY A USAR TEMPLATES
+    <h1>Mi web personal</h1>
+        <ul>
+            <li><a href="/">Portada</a></li>
+            <li><a href="/about-me">Acerca de </a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>-->
+{% extends "core/base.html" %} <!--ruta del archivo que tiene las cosas a heredar-->
+
+{% block title%}Home{% endblock %}
+
+{% block background %}{% load static %}<link rel="stylesheet" href="{% static 'core/css/style_index.css' %}">{% static 'core/img/pxfuel.jpg)' %}{% endblock %}
+
+
+
+<!--las cosas que son especificas de esta seccion:-->
+{% block content %}
+
+<section id="banner">
+    <div class="contenido-banner">
+        <h3><span>OUTATIME ></span><br> ¡explora nuestro emocionante mundo de viajes en el tiempo y aventuras! >  </h3>
+    </div>
+   </section>
+   <section id="presentacion">
+    <div class="contenedor">
+    <div class="programas">
+       <div class="carta">
+            <h3>quienes <br> somos?</h3>
+            <p class="p_index">personas apasionadas y entusiastas de la iconica franquicia cinematografica creada por robert zemeckis y bob gale.</p>
+            <a href="contact">
+            <button type="button">& info ></button>
+            </a>
+       </div>
+
+       <div class="carta">
+        <h3>a quien <br>esta dirigido?</h3>
+        <p class="p_index">adolescentes y adultos jovenes <br>amantes de la ciencia ficción <br> fanaticos de la comedia <br> personas que aprecian la nostalgia <br> </p>
+        <a href="curiosidades">
+                <button type="button">& info ></button>
+            </a>
+       </div>
+       
+    </div>
+    </section>
+    <section id="eshop-inv">
+        <div class="conte-inv">
+        <div class="prueba">
+        <h2> <br> te invitamos a que veas nuestro eshop ></h2>
+    <a href="eshop">
+        <button type="button">& info ></button>
+        </a>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

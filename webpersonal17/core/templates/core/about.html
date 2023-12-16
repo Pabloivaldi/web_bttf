@@ -1,0 +1,182 @@
+<!--
+    <h1>Mi web personal</h1>
+        <ul>
+            <li><a href="/">Portada</a></li>
+            <li><a href="/about-me">Acerca de </a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>-->
+
+{% extends "core/base.html" %}
+
+{% block title%}Peliculas{% endblock %}
+
+{% block background %}{% load static %}<link rel="stylesheet" href="{% static 'core/css/style_peliculas.css' %}">{% static 'core/img/bacg4.jpg' %}{% endblock %}
+
+
+{% block content %}
+
+<section>
+    <div id="banner">
+        <div class="contenido-banner">
+            <h3><span>OUTATIME:</span> PELICULAS</h3>
+            <!-- <a href="#" class="boton-empezar">Empezar</a> -->
+        </div>
+    </div>
+    <div id="contenido">
+        <div><h1>PELICULAS</h1></div>
+        <div class="movies"> <!--MOVIES-->
+            <article class="posters">
+                <figure class="afiche">
+                    <img src="{% static 'core/img/BTTF_1.jpg' %}" alt="BTTF_1">
+                </figure>
+                <div class="posters-content">
+                    <h2>VOLVER AL FUTURO I</h2>
+                    <span>Año: 1985</span><br> <span>Director: Robert Zemekis</span><br><span>Productor: Steven Spielberg</span><br><span>Duración: 116 min.</span><br><p style="text-align: justify;">Trama: Marty McFly es un joven de 17 años que accidentalmente es enviado 30 años al pasado en una máquina del tiempo. Ahora debe encontrar la forma de regresar a 1985 sin alterar la historia.</p>
+                </div>
+            </article>
+            <article class="posters">       
+                <figure class="afiche">
+                    <img src="{% static 'core/img/BTTF_2.jpg' %}" alt="BTTF_2">
+                </figure>
+                <div class="posters-content">
+                    <h2>VOLVER AL FUTURO II</h2>
+                    <span>Año: 1989</span><br><span>Director: Robert Zemekis</span><br><span>Productor: Steven Spielberg</span><br><span>Duración: 108 min.</span><br><p style="text-align: justify;">Trama: Luego de viajar al año 2015 y crear una nueva y desastroza linea temporal, Marty deberá volver a 1955 para recomponer todo sin interferir con su primero de los viajes .</p>
+                </div>
+            </article>
+            <article class="posters">
+                <figure class="afiche">
+                    <img src="{% static 'core/img/BTTF_3.jpg' %}" alt="BTTF_3">
+                </figure>
+                <div class="posters-content">
+                    <h2>VOLVER AL FUTURO III</h2>
+                    <span>Año: 1990</span><br><span>Director: Robert Zemekis</span> <br><span>Productor: Steven Spielberg</span><br><span>Duración: 118 min.</span><br><p style="text-align: justify;">Trama: Atrapado en 1955, Marty se entera que su amigo el Doc será asesinado en 1885 y decide ir a rescatarlo. Sin combustible para el Delorean, tendrán que encontrar la forma de viajar nuevamente al futuro.</p>
+                </div>
+            </article>
+        </div><!--FIN PELICULAS-->
+
+        <div><h1>TRAILERS</h1></div><!--TRAILERS-->
+        <div class="trailers"> 
+            <div class="container"> 
+                <script> // SCRIP PARA CAMBIO DE VIDEO
+                    function changeVideo(videoUrl) {
+                        var videoSource = document.getElementById('video-source');
+                        videoSource.src = videoUrl;
+                        var videoPlayer = document.getElementById('video-player');
+                        videoPlayer.load();
+                        videoPlayer.play();
+                    }
+                </script>
+                <div class="sidebar"> <!--BOTONERA-->
+                    <button class="video-button" style="background-color: rgb(250, 97, 97);" onclick="changeVideo('../video/BTTF1.mp4')">VOLVER AL FUTURO I</button>
+        
+                    <button class="video-button"  style="background-color: rgb(252, 252, 93);"onclick="changeVideo('../video/BTTF2.mp4')">VOLVER AL FUTURO II</button>
+        
+                    <button class="video-button" style="background-color: rgb(98, 250, 98);"onclick="changeVideo('../video/BTTF3.mp4')">VOLVER AL FUTURO  III</button>
+                </div>
+                <div class="video-container"> <!--REPRODUCTOR DE VIDEO-->
+                    <video id="video-player" controls>
+                        <source id="video-source"  type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div> <!--FIN TRAILERS-->
+
+        <div><h1>PROTAGONISTAS</h1></div><!--PROTAGONISTAS-->
+        <div class="protagonistas">
+            <div class="cards">
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0000150/?ref_=nv_sr_srsg_0_tt_2_nm_6_q_michael%2520j" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/michael1.jpg' %}" alt="fox">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>MICHAEL J. FOX</h2>
+                        <p>Michael J. Fox es un actor y productor canadiense, conocido por la saga Volver al futuro (1985),Teen Wolf (1985) y Spin City (1996). Dejó la actuación al tiempo de ser diagnosticado con Parkingson. Está casado con Tracy Pollan desde 1988. Tienen cuatro niños.</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0000502/?ref_=tt_cl_i_2" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/doc1.jpeg' %}" alt="Lloyd">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>CHRISTOPHER LLOYD</h2>
+                        <p>Christopher Lloyd nació el 22 de octubre de 1938 en Stamford, Connecticut. Es un actor y productor, conocido por Volver al futuro (1985), ¿Quién engañó a Roger Rabbit? (1988) y Los locos Addams (1991). Está casado con Lisa Loiacono desde el 23 de noviembre de 2016.</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0000417/?ref_=tt_cl_i_4" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/crispin1.jpg' %}" alt="Glover">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>CRISPIN GLOVER</h2>
+                        <p>Crispin Hellion Glover es un actor de cine, pintor, cineasta, escritor, músico, coleccionista de objetos y archivista de esotérica estadounidense. Es conocido por su trabajo en What Is It? (2005), Willard (2003), Los ángeles de Charlie (2007), e Instinto sádico (1986).</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0000670/?ref_=tt_cl_t_3" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/lea1.jpg' %}" alt="Thompson">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>LEA THOMPSON</h2>
+                        <p>Lea Catherine Thompson nació en 1961 en Rochester, Minnesota, Estados Unidos. Es una actriz y directora, conocida por Volver al futuro (1985), The Year of Spectacular Men (2017) y The Trouble with the Truth (2012). Está casada con Howard Deutch desde 1989. Tienen dos niños.</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0001855/?ref_=tt_cl_i_5" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/biff1.jpg' %}" alt="Biff">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>THOMAS F. WILSON</h2>
+                        <p>Thomas Franklin Wilson Jr. es un actor, comediante, escritor, músico, pintor y actor de voz estadounidense. Es más conocido por su papel del antagonista Biff Tannen en Volver al Futuro (1985), School of rock (2009), y Legends of the tomorrow (2020).</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0920148/?ref_=tt_cl_i_6" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/jennifer.jpg' %}" alt="Wells">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>CLAUDIA WELLS</h2>
+                        <p>Claudia Wells nació en 1966 en Kuala Lumpur, Malasia. La actriz interpretó a una de las tres "Jeniffer Parker" en Volver al futuro (1985). Las otras fueron Melora Hardin (The office) y Elizabeth Shue (Karate kid). Tambén trabajó en CBS Schoolbreak Special (1984) y Still waters burn (2015).</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://www.imdb.com/name/nm0005460/?ref_=tt_cl_t_3" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/clara.jpge' %}" alt="Clara">
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>MARY STEENBURGEN</h2>
+                        <p>Mary Steenburgen nació en 1953 en Arkansas, Estados Unidos. Es una actriz y productora, conocida por Plan en Las Vegas (2013), Hermanos por pelotas (2008) y Volver al futuro Parte III (1990). Está casada con Ted Danson desde 1995 y ha estado casada con Malcolm McDowell.</p>
+                    </div>
+                </article>
+                <article class="tarjeta">
+                    <a href="https://delorean.com/" target="_blank">
+                        <figure class="thumbnail">
+                            <img src="{% static 'core/img/delo1.jpg' %}" alt="Delorean">
+                          
+                        </figure>
+                    </a>
+                    <div class="tarjeta-content">
+                        <h2>DELOREAN</h2>
+                        <p>La DeLorean Motor Company fue fundada en 1975 y se declaró en bancarrota en 1982.El único modelo fabricado en ese período fue el usado en la saga Volver al Futuro. En 1995 tuvo una reestructuración, y desde 2008 fabrica autos customizados de forma muy limitada.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

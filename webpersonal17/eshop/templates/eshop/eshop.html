@@ -1,0 +1,99 @@
+ <!--   <h1>Mi web personal</h1>
+        <ul>
+            <li><a href="/">Portada</a></li>
+            <li><a href="/about-me">Acerca de </a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>-->
+{% extends "core/base.html" %}
+
+{% block title%}eShop{% endblock %}
+
+{% block background %}{% load static %}<link rel="stylesheet" href="{% static 'core/css/style_eshop.css' %}">{% static 'core/img/23.jpg)' %}{% endblock %}
+
+{% block content %}
+
+<!--{{projects}}     esto era solo para ver si funcionaba-->
+
+<section>
+    <div id="banner">
+        <div class="contenido-banner">
+            <h3><span>OUTATIME:</span> ESHOP</h3>
+            <!-- <a href="#" class="boton-empezar">Empezar</a> -->
+        </div>
+    </div>
+    
+
+
+   
+
+
+    <div class="cards">
+
+        {% for project in projects %}
+
+        <article class="tarjeta">
+           <a href="{{project.link}}" target="_blank"> {% comment %} el target blank es para que el link se abra en otra pestaña y no en la misma{% endcomment %}
+                <figure>
+                    <img src="{{project.image.url}}" alt=""> {% comment %}el .url es importante xq es lo que hace que tome la ruta de la imagen{% endcomment %}
+                </figure>
+            </a>
+            <div class="tarjeta-content">
+                <h2 class="h2_eshop">{{project.title}}</h2>
+                <p class="p_eshop">{{project.descripcion}}</p>
+            </div>
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+{% endblock %}
+
+
+        <!--
+
+usuario:
+
+grupo14com17
+
+contra:
+
+backtothefuture
+
+        INFO DE PRODUCTOS PARA AGREGAR/ HACER PRUEBAS EN EL ADMINISTRADOR DE DJANGO:
+
+
+        Titulo: LAMPARA
+        Descripcion: Es una lámpara y también una pequeña escultura que reproduce el logo original de la película.
+        Imagen: imagen 2.jpg
+        link: https://lafrikileria.com/es/regalos-regreso-al-futuro/30886-lampara-regreso-al-futuro-logo-en-3d-5060949241549.html
+
+
+        Titulo: FIGURA
+        Descripcion: Esta figura de Marty Mcfly en su icónico atuendo de la película es una verdadera obra de arte.
+        Imagen: imagen 3
+        link: https://lafrikileria.com/es/regalos-regreso-al-futuro/46465-figura-art-scale-regreso-al-futuro-ii-marty-mcfly-609963128600.html
+
+
+            
+        Titulo: FICHA DE POQUER
+        Descripcion: Kit de Bienvenido al Pleasure Paradise Casino and Hotel
+        Imagen: Imagen 7
+        link: https://lafrikileria.com/es/regalos-regreso-al-futuro/44533-regreso-al-futuro-replica-premium-box-5060662467059.html
+
+
+        Titulo: CUADRO
+        Descripcion: Maravillosa caja de los recuerdos que Marty McFly se ha traído a lo largo de sus míticos viajes por el tiempo.
+        Imagen: Imagen 8
+        link: https://lafrikileria.com/es/regalos-regreso-al-futuro/28469-cuadro-3d-regreso-al-futuro-delorean-8437017951315.html
+
+
+        Titulo: SOPORTE
+        Descripcion: Soporte Cargardor Poweridolz Regreso Al Futuro es un producto fabricado por la reconocida marca Numskull.
+        Imagen: Imagen 9
+        link:https://lafrikileria.com/es/regalos-regreso-al-futuro/48414-soporte-cargador-poweridolz-regreso-al-futuro-5056280435815.html
+-->

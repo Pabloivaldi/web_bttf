@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}{% endblock %} - OUTATIME</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'core/fonts/BTTF.ttf' %}"><!--las fuentes no son estaticas (o si? ni idea)-->
+
+   <link rel="stylesheet" href="{% static 'core/css/style_index.css' %}">
+   <link rel="stylesheet" href="{% static 'core/css/style_eshop.css' %}">
+   <link rel="stylesheet" href="{% static 'core/css/style_formulario.css' %}">
+   <link rel="stylesheet" href="{% static 'core/css/style_peliculas.css' %}">
+   <link rel="stylesheet" href="{% static 'core/css/style_curiosidades.css' %}">
+
+
+<!--aca tengo una duda, no se si estos css van aca, o cada tiene que ir en su seccion?-->
+   
+ 
+
+    <link rel="shortcut icon" href="{% static 'core/icon/favicon5.png' %}" type="images/x-icon">
+
+</head>
+
+
+<body>
+    {% block headers %}
+<!--Cabecera-->
+    <header>
+       
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+            &#8801
+        </label>
+        <nav class="menu">
+            <a href="{%url 'home'%}">& Inicio ></a>
+            <a href="{%url 'about'%}">& Peliculas ></a>
+            <a href="{%url 'curiosidades' %}">& Curiosidades ></a>
+            <a href="{%url 'eshop'%}">& Eshop ></a>
+            <a href="{%url 'contact'%}">& Contacto ></a>
+            <label for="check" class="esconder-menu">
+                & close
+            </label>
+        </nav>
+    </header>
+
+
+    {% endblock %}
+
+    
+    {% comment %} contenido {% endcomment %}
+    {% block content %}{% endblock %}
+
+
+   <footer>
+    <p>GRUPO 14  &copy; 2023 // OUTATIME: Volver al Futuro Fan Page // Todos los derechos reservados.</p>
+</footer>
+
+
+<script src="{% static 'core/js/formulario.js' %}"></script>
+
+</body>
+</html>
+
+
+
+
