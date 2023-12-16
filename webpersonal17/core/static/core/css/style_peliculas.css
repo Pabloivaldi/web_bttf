@@ -1,0 +1,459 @@
+@font-face {
+    font-family: 'BTTF';
+    src: url(../fonts/BTTF.ttf)format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "BTTF";
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #6e2178;
+    margin: 1em 0 2em 0;
+    text-align: center;
+    font-family: BTTF;
+    font-weight: 600;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-family: BTTF;
+    color: white;
+}
+
+h3{
+    font-family: BTTF;
+}
+
+p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+
+body {
+  /*  background-image: url(../img/bacg4.jpg);*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* HEADER */
+header{
+    height: 100px;
+    padding: 0 50px;
+    color:#ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header{
+    background-image: url(../img/images.jfif);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100px 60px;
+    margin-left: 10px;    
+
+}
+.menu a{
+    color: #faf6f6;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+#check{
+    display: none;
+}
+/*termina header*/
+
+/*BANNER */
+
+#banner{
+    padding: 0 50px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content:'';
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    left: 0;
+}  
+
+.contenido-banner{
+position: relative;
+color: #FFF;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+/*termina banner*/
+
+#contenido{
+    margin: 2em 6em;
+}
+
+
+/*MOVIES*/
+.afiche {
+    margin: 1em .5em;
+    border: .2em;
+    border-radius: .5em;
+}
+
+img {
+    border-radius: .4em;
+}
+
+.posters-content {
+    box-sizing: border-box;
+    height: 310px;
+    margin: 0em .5em 0.5em .5em;
+    padding: .5em;
+    border: .2em;
+    background-color: rgb(0, 0, 0);
+    opacity: 85%;
+    border-style: solid;
+    border-radius: .5em;
+    border-color: rgb(150, 58, 236);
+    
+    
+}
+.posters-content h2 {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    color: rgb(150, 58, 236);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+.posters-content span, p {
+    color:rgb(215, 215, 215);
+    width: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 1em;
+}
+
+/*TRAILERS*/
+
+.sidebar {
+    flex: 0 0 200px;
+    width: auto;
+}
+  
+.video-button {
+    display: block;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 33%;
+    font-size: 22px;
+}
+  
+.video-container {
+    flex: 1;
+}
+  
+video {
+    width: 100%;
+}
+
+
+/*PROTAGONISTAS*/
+
+.tarjeta-content {
+    height: 265px;
+    margin: 0em .8em 0.5em .8em;
+    padding: .5em;
+    border: .2em;
+    background-color: rgb(0, 0, 0);
+    opacity: 85%;
+    border-style: solid;
+    border-radius: .5em;
+    border-color: rgb(150, 58, 236);
+}  
+
+.tarjeta-content h2 {   
+    color:  rgb(150, 58, 236);
+    margin-top: 0.5em;
+    padding-left: 0;
+    margin-bottom: .5em;
+    font-size: 16px;
+    font-weight: normal;
+}
+.tarjeta-content p {
+    width: auto;
+    font-size: 14px;
+    padding: 0.5em;
+    font-weight: normal;
+    text-align: justify;
+}
+            
+figure {
+    margin:0.8em ;
+}
+
+img {
+    display: block;
+    border: .2em;
+    border-radius: .5em;
+    border-style: solid;
+    border-color: rgb(150, 58, 236);
+    max-width: 100%;
+}
+
+footer{
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px; 
+}
+
+
+/*Aca empieza el flex*/
+
+
+.posters {
+    margin-bottom: 2em;
+    width: 33%; 
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.container {
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    margin-bottom: 2em;
+    width: 25%; 
+}
+  
+@media all and (min-width: 600px) and (max-width: 1024px){ /*TABLET*/
+    header{
+        background-image: url(../img/images.jfif);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 15%;
+        margin-left: 10px;    
+    }
+    
+    h1{
+        margin: 1em 0 .5em 0;
+    }
+
+    #contenido{
+        margin: 1em 3em;
+    }
+    .menu{
+        font-size: 11px;
+        position: absolute;
+        float: right;
+        right: 30px;
+    }
+    .posters-content{
+       height: 290px;
+    }
+    .posters-content h2{
+        font-size: 20px;
+        font-weight: bold;
+        color:  rgb(150, 58, 236);
+    }
+    .posters-content span, p{
+        font-size: 10px;
+        
+    }
+    .sidebar{
+        flex: 0;
+        width: auto;
+    }
+    .video-button {
+        display: inline;
+        padding: .5em;
+        width: 32.7%;
+        height: 80px;
+        font-size: 22px;
+    }
+    .container{
+        display:inline;
+    }
+    
+    .tarjeta-content h2{
+        height: 35px;
+        font-size: 13px;
+        color: rgb(150, 58, 236);
+        font-weight: bold;
+    }   
+    .tarjeta-content p{
+        font-size: 9px;
+    }           
+
+}/*Fin Media tablet*/
+
+@media all and (max-width: 599px) { /*CELULAR*/
+    
+    header{
+        background-image: url(../img/images.jfif);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 35%;
+        margin-left: 10px;    
+    }
+    #contenido h1{
+        margin: 1.5em  0 .5em 0;
+        font-size: 16px;
+    }
+    #contenido{
+        margin: .5em 1.5em;
+    }
+
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    #banner{
+        padding: 0 15px;
+        height: 25vh;
+    }
+    #banner::before{
+        height: 25vh;
+    }
+    .contenido-banner h3{
+        font-size: 22px;
+    }
+  
+    .posters {
+        margin-bottom: 1em;
+        width: 100%; 
+    }
+    .posters-content{
+        height: 240px;
+    }
+    .posters-content h2{
+        color: rgb(150, 58, 236);
+        height: 25px;
+        font-size: 15px;
+    }
+    .posters-content span, p{
+        font-size: 10px;
+    }
+    .sidebar{
+        flex: 0;
+        width: auto;
+    }
+    .video-button {
+        display: inline;
+        border-radius: 5px;
+        margin:  0;
+        padding: 0;
+        width: 31.5%;
+        height: 40px;
+        font-size: 10px;
+    }
+    .container{
+        display:inline;
+    }
+    .tarjeta {
+        margin-bottom: .5em;
+        width: 50%; 
+    }
+    .tarjeta-content{
+        height: 190px;
+    }
+    .tarjeta-content h2{
+        height: 20px;
+        color: rgb(150, 58, 236);
+        padding: .3em;
+        height: 30px;
+        font-size: 9px;
+    }
+    .tarjeta-content p{
+        font-size: 7px;
+        padding: 0 .3em;
+    }
+
+}/*Fin Media celular*/
+
+
